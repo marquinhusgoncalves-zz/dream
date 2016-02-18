@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    jade = require("gulp-jade"),
     sass = require('gulp-ruby-sass'),
     autoprefix = require('gulp-autoprefixer'),
     nano = require('gulp-cssnano'),
@@ -8,6 +9,7 @@ var gulp = require('gulp'),
     bower = require('gulp-bower');
 
 var config = {
+    jadePath: './jade',
     scssPath: './scss',
     bowerDir: './bower_components'
 }
@@ -18,10 +20,20 @@ gulp.task('bower', function() {
 });
 
 gulp.task('icons', function() {
-    return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*')
+    return gulp.src([config.bowerDir + '/font-awesome/fonts/**.*', config.bowerDir + '/bootstrap-sass/assets/fonts/bootstrap/**.*'])
+    // return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*',)
         .pipe(gulp.dest('./fonts'))
         .pipe(notify({ message: 'Icons task complete' }));
 });
+
+// gulp.task('jade', function () {
+//     return gulp.src(config.jadePath + '/**/*.jade')
+//         .pipe(jade({
+//             pretty: true
+//         }))
+//         .pipe(gulp.dest('./'))
+//         .pipe(notify({ message: 'Jade task complete' }));
+// });
 
 gulp.task('styles', function() {
 	return sass(config.scssPath + '/style.scss', {
@@ -55,10 +67,11 @@ gulp.task('images', function() {
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
+    // gulp.watch(config.jadePath + '/**/*.jade', ['jade']);
     gulp.watch(config.scssPath + '/**/*.scss', ['styles']);
     gulp.watch('images/*', ['images']);
 });
 
 gulp.task('default', function() {
-    gulp.start(['bower', 'icons', 'styles', 'images', 'watch']);
+    gulp.start(['bower', 'styles', 'icons', 'images', 'watch']);
 });

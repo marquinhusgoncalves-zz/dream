@@ -1,0 +1,57 @@
+doctype html
+html(lang='pt-BR')
+   include head.jade
+   body
+    .container
+      .row
+        .span12
+          h1 Carrinho de compra
+          table.table.table-bordered.table-striped
+            thead
+              tr
+                th Remover
+                th Imagem
+                th Produto
+                th Modelo
+                th Quantidade
+                th Preço Un.
+                th Total
+            tbody
+              tr
+                td
+                  input#optionsCheckbox(type='checkbox', value='option1')
+                td.muted.center_text
+                  a(href='produto1.html')
+                  img(src='img/produto1.jpg', alt='')
+                td Produto 1
+                td Produto 1 Modelo
+                td
+                  input.input-mini(type='text', placeholder='1')
+                td R$ 1000,00
+                td R$ 1000,00
+              tr
+                td
+                  input#optionsCheckbox(type='checkbox', value='option2')
+                td.muted.center_text
+                  a(href='produto2.html')
+                  img(src='img/produto2.jpg', alt='')
+                td Produto 2
+                td Produto 2 Modelo
+                td
+                  input.input-mini(type='text', placeholder='1')
+                td R$ 1000,00
+                td R$ 1000,00
+              tr
+                td
+                td
+                td
+                td
+                td
+                td
+                td R$ 2000,00
+      .col-xs-12.col-sm-4.text-center
+        button.btn.btn-primary Atualizar
+      .col-xs-12.col-sm-4.text-center
+        button.btn.btn-primary Continuar comprando
+      .col-xs-12.col-sm-4.text-center
+        button.btn.btn-primary Finalizar
