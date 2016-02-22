@@ -18,9 +18,20 @@ git clone https://github.com/marquinhusgoncalves/dream.git
 Instalar dependências do Bower
 
 ```
-bower install 
+bower install
+```
 
+e
 
+```
+npm intall
+```
+
+Agora inicie o Gulp
+
+```
+gulp
+```
 
 ## Links
 
