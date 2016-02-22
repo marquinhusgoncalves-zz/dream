@@ -34,6 +34,7 @@ $(document).ready(function() {
 
 	$(document).on('click', '.remove', function(){
 		$(this).closest('tr').remove();
+		atualizaTotalGeral();
 	});
 
 	$(document).on('blur', '.quantidade', function(){
@@ -46,6 +47,10 @@ $(document).ready(function() {
 		preco = preco.replace('R$ ', '');
 		var total = qtde * preco;
 		$(this).parent().parent().find('.precototal').text('R$ ' + total.toFixed(2));
+		atualizaTotalGeral();
+	});
+
+	function atualizaTotalGeral() {
 		var totalGeral = 0;
 		$('.precototal').each(function() {
 			var subtotal = $(this).text();
@@ -53,6 +58,5 @@ $(document).ready(function() {
 			totalGeral += parseFloat(subtotal);
 		});
 		$('#totalGeral').text('R$ ' + totalGeral.toFixed(2));
-	});
-
+	}
 });
