@@ -1,0 +1,14 @@
+{
+    "endereco": [{
+            "endatual": "Av. Wallace Simonsen",
+            "endatualcompl": "Nova Petrópolis S.B.Campo - SP - 09771-211"
+        }, {
+            "endatual": "Av. Robert Kennedy",
+            "endatualcompl": "Assunção S.B.Campo - SP - 09771-211"
+        }, {
+            "endatual": "Av. Kennedy",
+            "endatualcompl": "Centro S.B.Campo - SP - 09771-211"
+        }
+
+    ]
+}

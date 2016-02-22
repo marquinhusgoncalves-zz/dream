@@ -1,0 +1,14 @@
+{
+    "produtos": [{
+            "foto": "img/tv.jpg",
+            "produto": "TV",
+            "modelo": "smart",
+            "precounitario": 2000
+        }, {
+            "foto": "img/celular.jpg",
+            "produto": "Celular",
+            "modelo": "Samsung",
+            "precounitario": 1000
+        }
+    ]
+}
