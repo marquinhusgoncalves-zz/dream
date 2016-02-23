@@ -35,11 +35,11 @@ gulp
 
 ## Links
 
-[Carrinho](oceanoweb/dream/carrinho.html)
+[Carrinho](oceanoweb.com.br/dream/carrinho.html)
 
-[Endereço](oceanoweb/dream/endereco.html)
+[Endereço](oceanoweb.com.br/dream/endereco.html)
 
-[Perfil](oceanoweb/dream/perfil.html)
+[Perfil](oceanoweb.com.br/dream/perfil.html)
 
 ## Contatos
 
