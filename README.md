@@ -24,7 +24,7 @@ bower install
 e
 
 ```
-npm intall
+npm install
 ```
 
 Agora inicie o Gulp
